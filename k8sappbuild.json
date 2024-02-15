@@ -1,0 +1,86 @@
+{
+  "id": 1,
+  "tiers": {
+    "App": {
+      "instances": [
+        {
+          "instance": {
+            "type": "kubernetesSpec",
+            "cloud": "Anu Hyper-V Cloud",
+            "layout": {
+              "id": 627,
+              "code": "kube-1.0-single"
+            },
+            "name": "${userInitials.toUpperCase()}SP${type.take(3).toUpperCase()}${sequence+1000}",
+            "userGroup": {
+              "id": ""
+            }
+          },
+          "cloud": {
+            "id": 1
+          },
+          "userRemovedFields": [
+            "instance.backup",
+            "backup.commvaultClient",
+            "backup.commvaultBackupSet",
+            "backup.commvaultStoragePolicy",
+            "config.poolProviderType"
+          ],
+          "backup": {
+            "veeamManagedServer": "",
+            "createBackup": false,
+            "jobAction": "new",
+            "jobRetentionCount": 3,
+            "enabled": true,
+            "providerBackupType": -1,
+            "showScheduledBackupWarning": false
+          },
+          "workflow": {
+            "taskSetId": ""
+          },
+          "volumes": [
+            {
+              "size": 1,
+              "name": "root",
+              "rootVolume": true,
+              "minStorage": 0,
+              "maxStorage": 1073741824
+            }
+          ],
+          "config": {
+            "resourcePoolId": "pool-20",
+            "resourceSpecTemplateId": [
+              {
+                "name": "Anu K8S Node Application Deployment",
+                "id": 148,
+                "value": 148
+              }
+            ]
+          },
+          "plan": {
+            "id": 108,
+            "code": "container-128"
+          },
+          "group": {
+            "id": 1
+          },
+          "ports": [
+            {
+              "name": "",
+              "port": "",
+              "lb": ""
+            }
+          ]
+        }
+      ],
+      "tierIndex": 1
+    }
+  },
+  "name": "Anu App 101",
+  "group": {
+    "id": 1,
+    "code": ""
+  },
+  "environment": "Production",
+  "type": "morpheus"
+}
