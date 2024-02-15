@@ -23,8 +23,6 @@ node {
     }
 
     stage('Deploy') {
-        steps {
-            sh 'sudo morpheus apps add AnuApp101 --payload k8sappbuild.json'
-        }
+        sh 'sudo morpheus apps add AnuApp101 --payload k8sappbuild.json'
     }
 }
