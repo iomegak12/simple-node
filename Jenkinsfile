@@ -21,8 +21,4 @@ node {
             app.push('latest')
         }
     }
-
-    stage('Deploy') {
-        sh 'sudo morpheus apps add AnuApp101 --payload k8sappbuild.json'
-    }
 }
